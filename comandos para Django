@@ -1,0 +1,57 @@
+Django
+DJango es un framework de Python para WEb 
+
+DRF  complemento del plugin de Django que permite trabajar con APIs
+
+pip install django
+pip freeze  <- ve los paquetes instalados
+django-admin startproject myproject  <- iniciar un proyecto en django
+
+Ir a la carpeta myproject
+python manage.py runserver  <- inicar el servidor (pryecto)
+pip install djangorestframework
+
+una vez instalado el archivo de framework vamos al archivo de settings.py y en el apartado INSTALLED_APPS
+escribimos lo siguiente al final de todo entre los corchetes:
+
+'rest_framework', 
+
+una vez que hayamos agregado el framework, volvemos a correr elservidor
+
+python3 manage.py runserver 
+
+vamos al navegador y escribimos
+localhost:8000
+
+Se vera una pantalla de Django como Bienvenida
+
+python3 manage.py startapp app1   <-iniciar una aplicación
+
+agregamos app1 a settings.py
+
+guardamos y volvemos a iniciar el proyecto
+python3 manage.py runserver
+
+
+ORM -> es para manejar BD a partir de modelos
+Hasta aqui se deben crear una tabla en el archibo models.py
+
+python3 manage.py makemigrations  <- crea la Bd 
+python3 manage.py migrate  <- migra la Bd
+
+
+Con ORM no se ecribe codigo SQL, todo se escribe en Python y se e deja la chamba al ORM pero si desea ver el codigo SQL que se esta generando detras, debe escribir el siquiente comando en la terminal:
+
+python3 manage.py sqlmigrate app1 0001
+
+# Serialización y deserealización
+## serializer es parecido a un fomruluario
+## donde se valida lo que los datos ingresados sean acorrectos
+
+# crear un archivo serializers.py en app1
+
+
+# instalar djangorestFrmaework
+## pip3 install djangorestframework-jwt
+
+
